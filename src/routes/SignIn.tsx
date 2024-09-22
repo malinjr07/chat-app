@@ -4,7 +4,6 @@ import Button from '@mui/material/Button';
 import Checkbox from '@mui/material/Checkbox';
 import CssBaseline from '@mui/material/CssBaseline';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import Divider from '@mui/material/Divider';
 import FormLabel from '@mui/material/FormLabel';
 import FormControl from '@mui/material/FormControl';
 import Link from '@mui/material/Link';
@@ -13,14 +12,8 @@ import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import MuiCard from '@mui/material/Card';
 import { styled } from '@mui/material/styles';
-import ForgotPassword from 'screens/ForgotPassword';
-import {
-  GoogleIcon,
-  FacebookIcon,
-  SitemarkIcon,
-} from 'components/CustomIcons';
+import ForgotPassword from 'routes/ForgotPassword';
 import AppTheme from 'theme/AppTheme';
-import ColorModeSelect from 'theme/ColorModeSelect';
 
 const Card = styled(MuiCard)(({ theme }) => ({
   display: 'flex',
@@ -115,11 +108,10 @@ export default function SignIn(props: { disableCustomTheme?: boolean }) {
     <AppTheme {...props}>
       <CssBaseline enableColorScheme />
       <SignInContainer direction='column' justifyContent='space-between'>
-        <ColorModeSelect
+        {/* <ColorModeSelect
           sx={{ position: 'fixed', top: '1rem', right: '1rem' }}
-        />
+        /> */}
         <Card variant='outlined'>
-          <SitemarkIcon />
           <Typography
             component='h1'
             variant='h4'
@@ -209,7 +201,7 @@ export default function SignIn(props: { disableCustomTheme?: boolean }) {
               </span>
             </Typography>
           </Box>
-          <Divider>or</Divider>
+          {/* <Divider>or</Divider>
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
             <Button
               type='submit'
@@ -229,7 +221,7 @@ export default function SignIn(props: { disableCustomTheme?: boolean }) {
             >
               Sign in with Facebook
             </Button>
-          </Box>
+          </Box> */}
         </Card>
       </SignInContainer>
     </AppTheme>
